@@ -3,40 +3,44 @@
     <title>CeluLand</title>
     <link rel=stylesheet href="celuLand.css">
     <script src="celuLand.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<body>
+<body onload="cargarTodo()">
 <div class="container">
     <h1>Celu Land</h1>
         <table >
             <thead>
                 <tr>
-                    <th>Nombre</th>
+                    <th>Id</th>
                     <th>Marca</th>
+                    <th>Color</th>
+                    <th>Almacenamiento</th>
+                    <th>Procesador</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td> 1</td>
-                    <td> 2</td>
-                </tr>
+            <tbody id="contenidoApi">
+                
             </tbody>
         </table>
-
-
-
 
         <h4>Ingrese el id del artículo a consultar</h4>
         <input type="text" id="idArticulo">
         <button onclick="btnConsultar()">Consultar</button>
 
             <div>
-                <textarea id="txtArea1"></textarea>
+                <textarea id="txtArea1" readonly></textarea>
             </div>
             <div>
-                <textarea id="txtArea2"></textarea>
+                <textarea id="txtArea2" readonly></textarea>
             </div>
             <div>
-                <textarea id="txtArea3"></textarea>
+                <textarea id="txtArea3" readonly></textarea>
+            </div>
+            <div>
+                <textarea id="txtArea4" readonly></textarea>
+            </div>
+            <div>
+                <textarea id="txtArea5" readonly></textarea>
             </div>
 
 
@@ -45,25 +49,27 @@
 
         <h4>Agregar artículo</h4>
         <div>
-            <label for="txtNombre">Nombre</label>
-            <input type="text" id="txtNombre">
+            <label for="txtMarca">Marca</label>
+            <input type="text" id="txtMarca">
         </div>
         <div>
-            <label for="txtNombre">Nombre</label>
-            <input type="text" id="txtNombre">
+            <label for="txtModelo">Modelo</label>
+            <input type="text" id="txtModelo">
         </div>
         <div>
-            <label for="txtNombre">Nombre</label>
-            <input type="text" id="txtNombre">
+            <label for="txtColor">Color</label>
+            <input type="text" id="txtColor">
         </div>
         <div></div>
-            <label for="txtNombre">Nombre</label>
-            <input type="text" id="txtNombre">
+            <label for="txtAlmacenamiento">Almacenamiento</label>
+            <input type="text" id="txtAlmacenamiento">
         <div>
-            <label for="txtNombre">Nombre</label>
-            <input type="text" id="txtNombre">
+            <label for="txtProcesador">Procesador</label>
+            <input type="text" id="txtProcesador">
         </div>
 
-        <button>Agregar</button>
+        <button onclick="btnAgregar()">Agregar</button>
 </div>
+
+
 </body>
