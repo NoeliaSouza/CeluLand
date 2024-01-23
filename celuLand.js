@@ -1,40 +1,4 @@
-/*function cargarTodo(){
-    try{
-        fetch('https://my-json-server.typicode.com/fedegaray/telefonos/db',{
-            method:'GET',
-            headers:{
-                "Content-Type":"application/json"
-            }
 
-        })
-        .then(respuesta=>respuesta.json())
-        .then(data=>{
-                let tabla=document.getElementById("contenidoApi");
-                let datos="";
-                for(let elemento of data.dispositivos){
-                    datos+=`
-                    <tr>
-                        <td>${elemento.id}</td>
-                        <td>${elemento.modelo}</td>
-                        <td>${elemento.color}</td>
-                        <td>${elemento.almacenamiento}</td>
-                        <td>${elemento.procesador}</td>
-
-                    </tr>
-                    `;
-                }
-                tabla.innerHTML=datos;
-                
-            })
-    .catch(error=>{
-        throw new Error("Error al solicitar: "+error)
-    })
-    }
-    catch(error){
-        console.error(error);
-    }
-
-}*/
 function cargarTodo(){
     try{
         axios.get('https://my-json-server.typicode.com/fedegaray/telefonos/db')
@@ -120,6 +84,7 @@ function btnAgregar(){
    
         axios.post(url, datos)
         .then(respuesta=>{alert(`${datos.marca} agregado con éxito!`);
+            limpiarAgregar();
             cargarTodo();
         })
         .catch(error=>{
@@ -188,6 +153,7 @@ function btnEliminar(){
 
         axios.delete(url)
         .then(respuesta=>{alert(`${modelo} eliminado exitosamente!`);
+            limpiarCampos()
             cargarTodo();    
         })
         .catch(error=>{
@@ -200,3 +166,58 @@ function btnEliminar(){
         console.error(error);
     }
 }
+
+function limpiarCampos(){
+        document.getElementById("idArticulo").value="";
+        document.getElementById("txtArea1").value="";
+        document.getElementById("txtArea2").value="";
+        document.getElementById("txtArea3").value="";
+        document.getElementById("txtArea4").value="";
+        document.getElementById("txtArea5").value="";
+}
+
+function  limpiarAgregar(){
+        document.getElementById("txtMarca").value="";
+        document.getElementById("txtModelo").value="";
+        document.getElementById("txtColor").value="";
+        document.getElementById("txtAlmacenamiento").value="";
+        document.getElementById("txtProcesador").value="";
+}
+
+/*function cargarTodo(){
+    try{
+        fetch('https://my-json-server.typicode.com/fedegaray/telefonos/db',{
+            method:'GET',
+            headers:{
+                "Content-Type":"application/json"
+            }
+
+        })
+        .then(respuesta=>respuesta.json())
+        .then(data=>{
+                let tabla=document.getElementById("contenidoApi");
+                let datos="";
+                for(let elemento of data.dispositivos){
+                    datos+=`
+                    <tr>
+                        <td>${elemento.id}</td>
+                        <td>${elemento.modelo}</td>
+                        <td>${elemento.color}</td>
+                        <td>${elemento.almacenamiento}</td>
+                        <td>${elemento.procesador}</td>
+
+                    </tr>
+                    `;
+                }
+                tabla.innerHTML=datos;
+                
+            })
+    .catch(error=>{
+        throw new Error("Error al solicitar: "+error)
+    })
+    }
+    catch(error){
+        console.error(error);
+    }
+
+}*/
