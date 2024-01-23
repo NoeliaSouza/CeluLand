@@ -1,8 +1,76 @@
 .container{
     text-align: center;
-    
 }
 table{
     margin:auto;
 }
+img{
+    width:10vh;
+    height:10vh;
+   
+}
+.titulo {
+    display: flex;
+    justify-content:center;
+   
+}
+body {
+    width: 80%;
+    margin: 2vh auto;
+    background-color: rgb(199, 245, 221);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 6px; 
+    text-align: left;
+}
+
+th {
+    background-color: rgb(64, 122, 177);
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+td {
+    background-color: #FFFFE0;
+}
+
+input {
+    background-color: #FFFFE0;
+    padding: 10px 10px;
+    font-size: 15px;
+    width: 150px;
+    border: none;
+    margin-bottom: 1vh;
+}
+
+textarea{
+    background-color: #FFFFE0;
+    border:none;
+}
+.datos{
+    margin-bottom: 2vh;
+}
+
+h2{
+    font-style: oblique;
+}
+
+button{
+    background-color: rgb(64, 122, 177);
+    color:white;
+    padding:1vh;
+}
+
+
+
 

@@ -7,7 +7,15 @@
 </head>
 <body onload="cargarTodo()">
 <div class="container">
-    <h1>Celu Land</h1>
+    <div class="titulo">
+         <h1 >Celu Land</h1>
+         <img src="logo.png" alt="icono">
+         
+    </div>
+    
+    <hr class="linea"/>
+
+    <h2>Gestión de artículos</h2>
         <table >
             <thead>
                 <tr>
@@ -23,10 +31,11 @@
             </tbody>
         </table>
 
-        <h4>Ingrese el id del artículo a consultar</h4>
+        <h2>Ingrese el id del artículo a consultar</h2>
         <input type="text" id="idArticulo">
         <button onclick="btnConsultar()">Consultar</button>
 
+        <div class="datos">
             <div>
                 <textarea id="txtArea1" readonly></textarea>
             </div>
@@ -43,31 +52,33 @@
                 <textarea id="txtArea5" readonly></textarea>
             </div>
 
-
+        </div>    
         <button onclick="btnModificar()">Modificar</button>
         <button onclick="btnEliminar()">Eliminar</button>
 
-        <h4>Agregar artículo</h4>
-        <div>
-            <label for="txtMarca">Marca</label>
-            <input type="text" id="txtMarca">
-        </div>
-        <div>
-            <label for="txtModelo">Modelo</label>
-            <input type="text" id="txtModelo">
-        </div>
-        <div>
-            <label for="txtColor">Color</label>
-            <input type="text" id="txtColor">
-        </div>
-        <div></div>
-            <label for="txtAlmacenamiento">Almacenamiento</label>
-            <input type="text" id="txtAlmacenamiento">
-        <div>
-            <label for="txtProcesador">Procesador</label>
-            <input type="text" id="txtProcesador">
-        </div>
-
+        <h2>Agregar artículo</h2>
+        
+            
+            <div>
+                <label for="txtMarca">Marca</label>
+                <input type="text" id="txtMarca">
+            </div>
+            <div>
+                <label for="txtModelo">Modelo</label>
+                <input type="text" id="txtModelo">
+            </div>
+            <div>
+                <label for="txtColor">Color</label>
+                <input type="text" id="txtColor">
+            </div>
+            <div></div>
+                <label for="txtAlmacenamiento">Almacenamiento</label>
+                <input type="text" id="txtAlmacenamiento">
+            <div>
+                <label for="txtProcesador">Procesador</label>
+                <input type="text" id="txtProcesador">
+            </div>
+           
         <button onclick="btnAgregar()">Agregar</button>
 </div>
 
